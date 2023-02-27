@@ -1,22 +1,18 @@
 import mongoose from "mongoose";
-import shortid from "shortid";
+import { PRIVATE_MONGODB_URI } from '$env/static/private';
 
-const LINK_SCHEMA = new mongoose.Schema({
+const connectDB = async () => {
 
-    originalURL: {
-        type: String,
-        required: true
-    },
+    // Deprecation suppression
+    mongoose.set('strictQuery', false);
 
-    shortURL: {
-        type: String,
-        default: shortid.generate
-    },
+    // Attempt to connect to the database
+    mongoose.connect(PRIVATE_MONGODB_URI);
 
-    visits: {
-        type: Number,
-        default: 0
-    }
-});
+    // On successful connection to the database
+    mongoose.connection.on('connected', () => {
+        console.log('MongoDB - successfully connected.');
+    });
+}
 
-export default LINK_SCHEMA;
+connectDB();
