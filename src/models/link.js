@@ -17,6 +17,6 @@ const LINK_SCHEMA = new mongoose.Schema({
         type: Number,
         default: 0
     }
-});
+}, { timestamps: true });
 
-export default LINK_SCHEMA;
+export default mongoose.model('links', LINK_SCHEMA);
