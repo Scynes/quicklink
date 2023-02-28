@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal&display=swap');
+
 /* ------------- *
  *   CSS Reset   *
  * ------------- */
@@ -18,10 +20,14 @@ html, body {
  *   GLOBAL   *
  * ---------- */
 :root {
-    /* background colors */
-
+    /* main colors */
+    --primary-col: hsl(165, 95%, 68%);
+    --secondary-col: hsl(246, 48%, 53%);
+    --tertiary-col: hsl(253, 100%, 80%);
     /* other colors */
     --white-col: white;
+    /* border */
+    --border-rounded-med: 3rem;
 }
 
 /* ----------- *
@@ -43,6 +49,74 @@ html, body {
     border: none !important;
 }
 
+.outlineless {
+    outline: none;
+}
+
+/* -------- *
+ *   FLEX   *
+ * -------- */
+.flex {
+    display: flex;
+}
+
+.flex.column {
+    flex-direction: column;
+}
+
+.flex.grow-1 {
+    flex-grow: 1;
+}
+
+.flex.align-space-between {
+    align-items: space-between;
+}
+
+/* -------- *
+ *   GRID   *
+ * -------- */
+.grid {
+    display: grid;
+}
+
+/* --------------- *
+ *   FLEX / GRID   *
+ * --------------- */
+.align-center:is(.flex, .grid) {
+    align-items: center;
+}
+
+.justify-center:is(.flex, .grid) {
+    justify-content: center;
+}
+
+/* ---------- *
+ *   BORDER   *
+ * ---------- */
+.rounded-med {
+    border-radius: var(--border-rounded-med);
+}
+
 /* --------------- *
  *   APPLICATION   *
  * --------------- */
+body {
+    font-family: 'Tajawal', sans-serif;
+    background: linear-gradient(-45deg, var(--primary-col), var(--secondary-col)) fixed;
+}
+
+form > input {
+    min-height: 6rem;
+    padding: 1rem;
+    background-color: rgba(255, 252, 252, 0.1);
+    box-shadow: 0 0 1.3rem var(--secondary-col), inset 0 0 0 var(--secondary-col);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+form > input:focus {
+    box-shadow: 0 0 0 var(--secondary-col), inset 0 0 1rem var(--secondary-col);
+}
+
+.url-form {
+    width: clamp(20rem, 100%, 60rem);
+}
