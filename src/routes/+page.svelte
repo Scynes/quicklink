@@ -1,3 +1,3 @@
 <form class="url-form" action="">
-    <input class="width-full outlineless borderless rounded-med" type="text" name="url" id="url" autocomplete="off">
+    <input class="width-full outlineless rounded-full text-center" type="text" name="url" id="url" autocomplete="off">
 </form>

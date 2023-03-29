@@ -21,13 +21,14 @@ html, body {
  * ---------- */
 :root {
     /* main colors */
-    --primary-col: hsl(165, 95%, 68%);
-    --secondary-col: hsl(246, 48%, 53%);
+    --primary-col: #202124;
+    --secondary-col: #d1d1d3;
     --tertiary-col: hsl(253, 100%, 80%);
     /* other colors */
     --white-col: white;
+    --transparent: rgba(255, 255, 255, 0);
     /* border */
-    --border-rounded-med: 3rem;
+    --border-rounded-full: 5rem;
 }
 
 /* ----------- *
@@ -93,28 +94,35 @@ html, body {
 /* ---------- *
  *   BORDER   *
  * ---------- */
-.rounded-med {
-    border-radius: var(--border-rounded-med);
+.rounded-full {
+    border-radius: var(--border-rounded-full);
 }
 
 /* --------------- *
  *   APPLICATION   *
  * --------------- */
-body {
+* {
+    font-size: 2rem;
     font-family: 'Tajawal', sans-serif;
-    background: linear-gradient(-45deg, var(--primary-col), var(--secondary-col)) fixed;
+}
+
+body {
+    background-color: #202124;
 }
 
 form > input {
     min-height: 6rem;
     padding: 1rem;
-    background-color: rgba(255, 252, 252, 0.1);
-    box-shadow: 0 0 1.3rem var(--secondary-col), inset 0 0 0 var(--secondary-col);
-    transition: box-shadow 0.2s ease-in-out;
+    border: 1px solid var(--secondary-col);
+    background-color: var(--transparent);
+    box-shadow: inset 0 0 0 var(--transparent);
+    transition: 0.2s ease-in-out;
 }
 
 form > input:focus {
-    box-shadow: 0 0 0 var(--secondary-col), inset 0 0 1rem var(--secondary-col);
+    border-color: var(--primary-col);
+    background-color: var(--secondary-col);
+    box-shadow: inset 0 0 1.25rem var(--primary-col);
 }
 
 .url-form {
