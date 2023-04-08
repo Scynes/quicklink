@@ -8,7 +8,7 @@
     <nav>
         Navigation
     </nav>
-    <main class="flex grow-1 align-center justify-center">
+    <main class="flex column grow-1 align-center justify-center">
         <slot />
     </main>
 </div>
