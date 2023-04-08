@@ -5,9 +5,6 @@
 </script>
 
 <div class="flex column page-wrapper height-full width-full">
-    <nav>
-        Navigation
-    </nav>
     <main class="flex column grow-1 align-center justify-center">
         <slot />
     </main>

@@ -111,7 +111,7 @@ body {
 }
 
 main {
-    padding: 4rem;
+    padding: 0 4rem;
     gap: 4rem;
 }
 
@@ -129,19 +129,34 @@ form > input:focus {
 }
 
 .url-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     width: clamp(20rem, 100%, 60rem);
 }
 
 .about {
     display: flex;
     flex-wrap: wrap;
+    min-height: 100vh;
+    gap: 2rem;
 }
 
 .about-card {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     min-height: 20rem;
-    flex-basis: calc(100% / 3);
+    flex-basis: calc((100% - 4rem) / 3);
+}
+
+@media (max-width: 780px) {
+
+    .about-card {
+        flex-basis: 50% - 2rem;
+    }
 }
 
 @media (max-width: 480px) {
