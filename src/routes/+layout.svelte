@@ -1,11 +1,18 @@
 <script>
 
     import '@public/css/style.css';
+    import NavBar from '@components/common/NavBar.svelte';
 
 </script>
 
-<div class="flex column page-wrapper height-full width-full">
-    <main class="flex column grow-1 align-center justify-center">
+<page-container>
+    <header>
+        <NavBar />
+    </header>
+    <main class="page-content">
         <slot />
     </main>
-</div>
+    <footer>
+        
+    </footer>
+</page-container>
