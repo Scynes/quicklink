@@ -15,8 +15,8 @@
 
 <svelte:window on:scroll={handleScroll} />
 
-<nav class:show={showNav}>
-    <a href="#top" class="nav-item">QuickLink</a>
+<nav class="width-full" class:show={showNav}>
+    <a href="#top" class="nav-item">Home</a>
     <a href="#top" class="nav-item">About</a>
     <a href="#top" class="nav-item">Signup</a>
     <a href="#top" class="nav-item">Log In</a>

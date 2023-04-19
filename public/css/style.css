@@ -21,8 +21,13 @@ html, body {
  * ---------- */
 :root {
     /* background colors */
+    --light-dark-gray: rgb(197, 197, 197);
+    --dark-gray: #393939;
+    --darker-gray: #121212;
 
     /* other colors */
+    --ecto-green: #00C8A0;
+    --light-lavender: #F7EBFF;
     --white-col: white;
 }
 
@@ -75,6 +80,10 @@ html, body {
     display: grid;
 }
 
+.grid.place-center {
+    place-items: center;
+}
+
 /* --------------- *
  *   FLEX / GRID   *
  * --------------- */
@@ -94,16 +103,51 @@ html, body {
     font-family: 'Tajawal', sans-serif;
 }
 
+a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
 section {
     min-height: 100vh;
+    padding: 2rem;
+}
+
+section.shorten-link {
+    display: grid;
+    place-items: center;
+    background-color: var(--dark-gray);
+}
+
+section.about {
+    background-color: var(--light-dark-gray);
 }
 
 nav {
+    display: flex;
+    justify-content: center;
     position: fixed;
     transform: translateY(-100%);
-    transition: transform 0.3s ease-in-out;
+    background-color: var(--darker-gray);
+    transition: transform 0.4s ease-in-out;
+    border-radius: 0 0 1.75rem 1.75rem;
 }
 
 nav.show {
     transform: translateY(0);
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 6rem;
+    min-width: 10rem;
+    color: var(--ecto-green);
+}
+
+.shorten-input {
+    min-height: 5rem;
+    width: clamp(25rem, 100%, 40rem);
 }
