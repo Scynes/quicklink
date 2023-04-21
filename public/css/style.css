@@ -25,6 +25,7 @@ html, body {
     --dark-gray: #393939;
     --dark-gray-desaturated: #d6d6d6;
     --darker-gray: #121212;
+    --darker-gray-light-desaturation: rgba(18, 18, 18, 0.65);
     --darker-gray-desaturated: rgba(18, 18, 18, 0.35);
 
     /* other colors */
@@ -137,15 +138,31 @@ section.shorten-link form {
 }
 
 section.about {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+section.about .about-card {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 33%;
+    padding-top: 10rem;
+}
+
+section.about .about-card > p {
+    text-align: center;
+    max-width: 80%;
 }
 
 nav {
     display: flex;
     justify-content: center;
     position: fixed;
+    z-index: 10;
     transform: translateY(-100%);
-    background-color: var(--darker-gray-desaturated);
+    background-color: var(--darker-gray-light-desaturation);
     transition: transform 0.4s ease-in-out;
     backdrop-filter: blur(4px);
 }
@@ -172,4 +189,24 @@ nav.show {
 
 .shorten-input:focus {
     box-shadow: 0 0 0 var(--transparent), inset 0.5rem 0.5rem 0.5rem var(--darker-gray);
+}
+
+.icon-ecto {
+    color: var(--ecto-green);
+}
+
+@media (max-width: 720px) {
+
+    section.about .about-card {
+        flex-basis: 50%;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    section.about .about-card {
+        flex-basis: 100%;
+    }
+
 }
