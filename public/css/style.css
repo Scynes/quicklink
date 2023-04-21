@@ -25,6 +25,7 @@ html, body {
     --dark-gray: #393939;
     --dark-gray-desaturated: #d6d6d6;
     --darker-gray: #121212;
+    --darker-gray-desaturated: rgba(18, 18, 18, 0.35);
 
     /* other colors */
     --ecto-green: #00C8A0;
@@ -120,6 +121,19 @@ section.shorten-link {
     display: grid;
     place-items: center;
     background-color: var(--dark-gray);
+    background-image: url(../images/bg-strokes.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+section.shorten-link form {
+    min-height: 30rem;
+    width: clamp(25rem, 100%, 70rem);
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: var(--darker-gray-desaturated);
+    backdrop-filter: blur(4px);
 }
 
 section.about {
@@ -131,8 +145,9 @@ nav {
     justify-content: center;
     position: fixed;
     transform: translateY(-100%);
-    background-color: var(--darker-gray);
+    background-color: var(--darker-gray-desaturated);
     transition: transform 0.4s ease-in-out;
+    backdrop-filter: blur(4px);
 }
 
 nav.show {
@@ -150,7 +165,6 @@ nav.show {
 
 .shorten-input {
     min-height: 5rem;
-    width: clamp(25rem, 100%, 70rem);
     border-radius: 8rem;
     box-shadow: 0.5rem 0.5rem 0.5rem var(--darker-gray), inset 0 0 0 var(--transparent);
     transition: 0.3s ease-in-out;
