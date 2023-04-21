@@ -107,6 +107,10 @@ html, body {
     font-family: 'Tajawal', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a {
     text-align: center;
     text-decoration: none;

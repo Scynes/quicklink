@@ -3,7 +3,7 @@
         <input class="shorten-input outlineless borderless text-center width-full" type="text">
     </form>
 </section>
-<section class="about">
+<section id="about" class="about">
     <div class="about-card">
         <i class="fa-solid fa-bolt fa-3x icon-ecto"></i>
         <h1>Fast</h1>

@@ -17,7 +17,7 @@
 
 <nav class="width-full" class:show={showNav}>
     <a href="#top" class="nav-item">Home</a>
-    <a href="#top" class="nav-item">About</a>
+    <a href="#about" class="nav-item">About</a>
     <a href="#top" class="nav-item">Signup</a>
     <a href="#top" class="nav-item">Log In</a>
 </nav>
