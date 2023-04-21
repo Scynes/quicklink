@@ -23,12 +23,14 @@ html, body {
     /* background colors */
     --light-dark-gray: rgb(197, 197, 197);
     --dark-gray: #393939;
+    --dark-gray-desaturated: #d6d6d6;
     --darker-gray: #121212;
 
     /* other colors */
     --ecto-green: #00C8A0;
     --light-lavender: #F7EBFF;
     --white-col: white;
+    --transparent: rgba(255, 255, 255, 0);
 }
 
 /* ----------- *
@@ -121,7 +123,7 @@ section.shorten-link {
 }
 
 section.about {
-    background-color: var(--light-dark-gray);
+
 }
 
 nav {
@@ -131,7 +133,6 @@ nav {
     transform: translateY(-100%);
     background-color: var(--darker-gray);
     transition: transform 0.4s ease-in-out;
-    border-radius: 0 0 1.75rem 1.75rem;
 }
 
 nav.show {
@@ -149,5 +150,12 @@ nav.show {
 
 .shorten-input {
     min-height: 5rem;
-    width: clamp(25rem, 100%, 40rem);
+    width: clamp(25rem, 100%, 70rem);
+    border-radius: 8rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem var(--darker-gray), inset 0 0 0 var(--transparent);
+    transition: 0.3s ease-in-out;
+}
+
+.shorten-input:focus {
+    box-shadow: 0 0 0 var(--transparent), inset 0.5rem 0.5rem 0.5rem var(--darker-gray);
 }

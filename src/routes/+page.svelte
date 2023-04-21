@@ -1,6 +1,6 @@
 <section class="shorten-link">
     <form class="width-full grid place-center" action="#">
-        <input class="shorten-input" type="text">
+        <input class="shorten-input outlineless borderless text-center" type="text">
     </form>
 </section>
 <section class="about">
