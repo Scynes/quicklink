@@ -4,7 +4,7 @@
         {
             icon: 'fa-bolt',
             title: 'Fast',
-            description: 'QuickLink delivers lightning-fast redirections, ensuring minimal wait time for users accessing shortened URLs.'
+            description: 'uickLink delivers lightning-fast redirections, ensuring minimal wait time for users accessing shortened URLs.'
         },
         {
             icon: 'fa-link',
@@ -24,7 +24,7 @@
         {
             icon: 'fa-chart-simple',
             title: 'Statistics',
-            description: 'Gain valuable insights through comprehensive analytics, helping you understand user engagement and optimize your marketing strategies.'
+            description: 'Gain valuable insights through comprehensive analytics, helping you understand user engagement.'
         },
         {
             icon: 'fa-mobile-screen-button',
